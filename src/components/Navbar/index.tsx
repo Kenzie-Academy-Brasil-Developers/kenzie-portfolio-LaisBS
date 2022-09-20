@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useMedia from "use-media";
 import { userData } from "@/utils/userData";
 
@@ -14,7 +14,9 @@ import {
 import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
-import { Container } from "@/styles/Global";
+import { Container, darkTheme, theme } from "@/styles/Global";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { BsSun } from "react-icons/bs";
 
 export interface MenuButtonOpen {
   open: Boolean;
@@ -27,11 +29,26 @@ export const NavBar = (): JSX.Element => {
   document.title = userData.nameUser;
 
   const [open, setOpen] = useState(false);
+  const [blackSchema, setblackSchema] = useState(false);
 
   const OpenMenu = () => {
     setOpen(!open);
   };
 
+  let app = document.getElementById("app");
+
+  const darkMode = () => {
+    setblackSchema(!blackSchema);
+  };
+
+  if (blackSchema === true) {
+    app?.classList.remove(theme);
+    app?.classList.add(darkTheme);
+  }
+  if (blackSchema === false) {
+    app?.classList.remove(darkTheme);
+    app?.classList.add(theme);
+  }
   return (
     <NavbarWrapper>
       <Container>
@@ -45,6 +62,9 @@ export const NavBar = (): JSX.Element => {
               height={"48px"}
             />
             <LogoTipoText>{userData.nameUser}</LogoTipoText>
+            <Button type="icon" onClick={darkMode}>
+              {!blackSchema ? <MdOutlineDarkMode /> : <BsSun />}
+            </Button>
           </LogoTipo>
           {isWide && (
             <Button

@@ -4,6 +4,8 @@ import imgJS from "../public/static/img/stack/js.svg";
 import imgNode from "../public/static/img/stack/node.svg";
 import imgStyled from "../public/static/img/stack/styled.svg";
 import imgReact from "../public/static/img/stack/react.svg";
+import imgRedux from "../public/static/img/stack/redux.svg";
+import imgGit from "../public/static/img/stack/git.svg";
 import { FaVuejs } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
@@ -34,6 +36,8 @@ export const stackData = [
     img: imgReact,
   },
   // { title: "Vuejs", img: FaVuejs },
-  // { title: "TypeScript", img: SiTypescript },
-  // { title: "Docker", img: FaDocker },
+  { title: "TypeScript", img: SiTypescript },
+  { title: "Docker", img: FaDocker },
+  { title: "Redux", img: imgRedux },
+  { title: "GIT", img: imgGit },
 ];

@@ -24,7 +24,6 @@ import {
   ProjectAreaWrapperColumns,
 } from "./style";
 
-
 export const Home = (): JSX.Element => {
   return (
     <main>
@@ -39,11 +38,12 @@ export const Home = (): JSX.Element => {
               de diversos projetos resolvendo problemas de alto nível e
               desenvolvendo habilidades
             </Text>
+
             <HeaderButtonsArea>
               <Button as="a" href="#projetos">
                 Projetos
               </Button>
-              <Button as="a" href="#tecnologias" type="btLink" color="grey5">
+              <Button as="a" href="#tecnologias">
                 Tecnologias
               </Button>
             </HeaderButtonsArea>

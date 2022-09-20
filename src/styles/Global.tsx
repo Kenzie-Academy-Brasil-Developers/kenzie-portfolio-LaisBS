@@ -1,5 +1,6 @@
 import { createTheme, globalCss, styled } from "@stitches/react";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
+import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
 interface GlobalStyleProps {
   children: ReactNode;
@@ -60,70 +61,134 @@ export const globalStyles = globalCss({
   a: { textDecoration: "none" },
 });
 
+export const theme = createTheme({
+  colors: {
+    brand1: "#b24ee0",
+    brand2: "#c252d8",
+    brand3: "#BEC1F8",
+    brand4: "#E7E8FC",
+    grey1: "#212529",
+    grey2: "#495057",
+    grey3: "#CED3D7",
+    grey4: "#F1F3F5",
+    grey5: "#F8F9FA",
+    grey6: "#DEE0FB",
+    whiteFixed: "#ffffff",
+    mode: "#ffffff",
+    black: "#000000ef",
+  },
+  sizes: {
+    container: "75rem",
+  },
+  space: {
+    1: "0.5rem",
+    2: "1rem",
+    3: "2rem",
+  },
+  fonts: {
+    titles: '"Lexend", sans-serif;',
+    texts: '"Inter", sans-serif',
+  },
+  fontSizes: {
+    title1: "2.75rem",
+    title2: "1.75rem",
+    title3: "1.50rem",
+    title4: "1.25rem",
+    text1: "1rem",
+    text2: "0.875rem",
+
+    // Mobile
+    title1Mobile: "$title2",
+    title2Mobile: "$title3",
+  },
+  lineHeights: {
+    title1: "3.8rem",
+    title2: "2.75rem",
+    title3: "2.5rem",
+    title4: "1.25rem",
+    text1: "1.75rem",
+    text2: "1.75rem",
+
+    // Mobile
+    title1Mobile: "$title2",
+    title2Mobile: "$title3",
+  },
+
+  radii: {
+    1: "0.5rem",
+    2: "0.25rem",
+  },
+});
+
+export const darkTheme = createTheme({
+  colors: {
+    brand1: "#e049b0",
+    brand2: "#c252d8",
+    brand3: "#BEC1F8",
+    brand4: "#E7E8FC",
+    grey1: "#a751cf",
+    grey2: "#d2bbdd",
+    grey3: "#323034",
+    grey4: "#29172c",
+    grey5: "#c9a7cd",
+    grey6: "#DEE0FB",
+    whiteFixed: "#e1dede",
+    mode: "rgb(51, 51, 51)",
+    black: "#000000ef",
+  },
+  sizes: {
+    container: "75rem",
+  },
+  space: {
+    1: "0.5rem",
+    2: "1rem",
+    3: "2rem",
+  },
+  fonts: {
+    titles: '"Lexend", sans-serif;',
+    texts: '"Inter", sans-serif',
+  },
+  fontSizes: {
+    title1: "2.75rem",
+    title2: "1.75rem",
+    title3: "1.50rem",
+    title4: "1.25rem",
+    text1: "1rem",
+    text2: "0.875rem",
+
+    // Mobile
+    title1Mobile: "$title2",
+    title2Mobile: "$title3",
+  },
+  lineHeights: {
+    title1: "3.8rem",
+    title2: "2.75rem",
+    title3: "2.5rem",
+    title4: "1.25rem",
+    text1: "1.75rem",
+    text2: "1.75rem",
+
+    // Mobile
+    title1Mobile: "$title2",
+    title2Mobile: "$title3",
+  },
+
+  radii: {
+    1: "0.5rem",
+    2: "0.25rem",
+  },
+});
+
+export const App = styled("div", {
+  minHeight: "100vh",
+});
+
 export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
-  const theme = createTheme({
-    colors: {
-      brand1: "#5C63ED",
-      brand2: "#7D82F1",
-      brand3: "#BEC1F8",
-      brand4: "#E7E8FC",
-      grey1: "#212529",
-      grey2: "#495057",
-      grey3: "#CED3D7",
-      grey4: "#F1F3F5",
-      grey5: "#F8F9FA",
-      grey6: "#DEE0FB",
-      whiteFixed: "#ffffff",
-      mode: "#ffffff",
-    },
-    sizes: {
-      container: "75rem",
-    },
-    space: {
-      1: "0.5rem",
-      2: "1rem",
-      3: "2rem",
-    },
-    fonts: {
-      titles: '"Lexend", sans-serif;',
-      texts: '"Inter", sans-serif',
-    },
-    fontSizes: {
-      title1: "2.75rem",
-      title2: "1.75rem",
-      title3: "1.50rem",
-      title4: "1.25rem",
-      text1: "1rem",
-      text2: "0.875rem",
-
-      // Mobile
-      title1Mobile: "$title2",
-      title2Mobile: "$title3",
-    },
-    lineHeights: {
-      title1: "3.8rem",
-      title2: "2.75rem",
-      title3: "2.5rem",
-      title4: "1.25rem",
-      text1: "1.75rem",
-      text2: "1.75rem",
-
-      // Mobile
-      title1Mobile: "$title2",
-      title2Mobile: "$title3",
-    },
-
-    radii: {
-      1: "0.5rem",
-      2: "0.25rem",
-    },
-  });
-
   globalStyles();
 
-  const App = styled("div", {
-    minHeight: "100vh",
-  });
-
-  return <App className={theme}>{children}</App>;
+  return (
+    <App className={theme} id="app">
+      {children}
+    </App>
+  );
 };

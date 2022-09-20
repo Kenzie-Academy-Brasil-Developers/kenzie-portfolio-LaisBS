@@ -2,14 +2,14 @@ import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
 
-import img from "@/public/static/img/background/dots.svg";
+import img from "@/public/static/img/knot/knot-loader.gif";
 
 export const Header = styled("header", {
-  backgroundColor: "$brand1",
+  backgroundColor: "$black",
   padding: "12rem 0 8rem 0",
   backgroundImage: `url(${img})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "bottom 1rem right 1rem",
+  backgroundPositionX: "right",
   "@mobile": {
     padding: "9rem 0 6rem 0",
   },
@@ -54,6 +54,7 @@ export const StackCards = styled("div", {
 
 export const ProjectsArea = styled("section", {
   padding: "4rem 0 8rem 0",
+  backgroundColor: "$mode",
 });
 
 export const ProjectsAreaSocialMediaMessage = styled("aside", {
