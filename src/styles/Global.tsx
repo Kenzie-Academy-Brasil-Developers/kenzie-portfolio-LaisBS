@@ -1,6 +1,5 @@
 import { createTheme, globalCss, styled } from "@stitches/react";
 import { ReactNode, useState } from "react";
-import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
 interface GlobalStyleProps {
   children: ReactNode;

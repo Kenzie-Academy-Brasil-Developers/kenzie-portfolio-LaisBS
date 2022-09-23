@@ -21,6 +21,13 @@ export const HeaderContent = styled("div", {
   display: "flex",
   flexDirection: "column",
   gap: "$2",
+
+  h1: {
+    color: "$grey5",
+    fontSize: "2.75rem",
+    lineHeight: "3.8rem",
+    fontWeight: 700,
+  },
 });
 
 export const HeaderButtonsArea = styled(Flex, {
