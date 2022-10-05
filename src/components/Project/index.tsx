@@ -10,6 +10,7 @@ import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
 import { userData } from "@/utils/userData";
+import { RepoImgs } from "@/utils/reposData";
 
 interface ReposType {
   id: number;
@@ -22,6 +23,7 @@ interface ReposType {
 
 export const Project = (): JSX.Element => {
   const [repositories, setRepositories] = useState<ReposType[]>([]);
+  console.log(repositories);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,7 +56,12 @@ export const Project = (): JSX.Element => {
           >
             {repository.name}
           </Text>
-
+          {RepoImgs?.map(
+            (img) =>
+              img.id === repository.id && (
+                <img src={img.img} style={{ width: "40vw" }} key={img.id}></img>
+              )
+          )}
           {repository.language && (
             <ProjectStack>
               <Text type="body2">Linguagem:</Text>

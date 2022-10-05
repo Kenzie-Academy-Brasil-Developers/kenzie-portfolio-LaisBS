@@ -129,7 +129,7 @@ export const darkTheme = createTheme({
     grey2: "#d2bbdd",
     grey3: "#323034",
     grey4: "#29172c",
-    grey5: "#c9a7cd",
+    grey5: "#ecbaf2",
     grey6: "#DEE0FB",
     whiteFixed: "#e1dede",
     mode: "rgb(51, 51, 51)",

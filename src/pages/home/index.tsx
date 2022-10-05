@@ -63,7 +63,7 @@ export const Home = (): JSX.Element => {
       <ProjectsArea id="projetos">
         <Container>
           <ProjectAreaWrapperColumns>
-            <ProjectsAreaSocialMediaMessage>
+            {/* <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey1">
                 Vamos trocar uma ideia?
               </Text>
@@ -80,7 +80,7 @@ export const Home = (): JSX.Element => {
               >
                 Acessar perfil no LinkedIn
               </Button>
-            </ProjectsAreaSocialMediaMessage>
+            </ProjectsAreaSocialMediaMessage> */}
             <ProjectsAreaContent>
               <Text type="body1" color="grey2" css={{ marginBottom: "$2" }}>
                 Projetos
