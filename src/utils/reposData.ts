@@ -19,4 +19,8 @@ export const RepoImgs = [
     id: 503460439,
     img: "https://res.cloudinary.com/dqqw3fvn2/image/upload/v1664932891/do-it_b1vb7i.png",
   },
+  {
+    id: 553023270,
+    img: "https://res.cloudinary.com/dqqw3fvn2/image/upload/v1666026519/Diagrama_sem_nome.drawio_pn6yoj.png",
+  },
 ];

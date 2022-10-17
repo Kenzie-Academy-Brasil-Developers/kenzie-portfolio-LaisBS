@@ -30,7 +30,9 @@ export const Home = (): JSX.Element => {
       <Header>
         <Container>
           <HeaderContent>
-            <h1>Desenvolvedora web front-end </h1>
+            <h1>
+              Desenvolvimento web<br></br>full-stack{" "}
+            </h1>
             <Text type="body1" color="grey6">
               Sou estudante de programação na Kenzie Academy Brasil, participei
               de diversos projetos resolvendo problemas de alto nível e

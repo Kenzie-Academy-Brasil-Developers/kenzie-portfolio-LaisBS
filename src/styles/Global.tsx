@@ -121,7 +121,7 @@ export const theme = createTheme({
 
 export const darkTheme = createTheme({
   colors: {
-    brand1: "#e049b0",
+    brand1: "#b24ee0",
     brand2: "#c252d8",
     brand3: "#BEC1F8",
     brand4: "#E7E8FC",
